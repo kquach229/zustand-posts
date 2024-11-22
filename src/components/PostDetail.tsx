@@ -89,18 +89,27 @@ const PostDetail = ({ post }: { post: Post }) => {
               marginBottom: '8px',
             }}
           />
-          <button onClick={handleSave} style={editButtonStyle}>
-            Save
-          </button>
-          <button onClick={() => setIsEditing(false)} style={deleteButtonStyle}>
-            Cancel
-          </button>
+          <div style={{ display: 'flex', gap: 5 }}>
+            <button onClick={handleSave} style={editButtonStyle}>
+              Save
+            </button>
+            <button
+              onClick={() => setIsEditing(false)}
+              style={deleteButtonStyle}>
+              Cancel
+            </button>
+          </div>
         </>
       ) : (
         <>
           <h5 style={titleStyle}>{title}</h5>
           <span style={bodyStyle}>{body}</span>
-          <div style={{ marginTop: '12px' }}>
+          <div
+            style={{
+              marginTop: '12px',
+              display: 'flex',
+              gap: 5,
+            }}>
             <button onClick={() => setIsEditing(true)} style={editButtonStyle}>
               Edit
             </button>
