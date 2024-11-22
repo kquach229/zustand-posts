@@ -12,6 +12,17 @@ const App = () => {
       <div>
         <PostList posts={posts} />
       </div>
+      {posts.length === 0 ? (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '500px',
+          }}>
+          <h5>Create Some Posts</h5>
+        </div>
+      ) : null}
     </div>
   );
 };
